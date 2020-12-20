@@ -1,9 +1,9 @@
-member(_, [], 0).
-member(H, [H|T], Count) :- 
-  member(H,T, Count1), 
-  Count is Count1 + 1.
+# member(_, [], 0).
+# member(H, [H|T], Count) :- 
+#   member(H,T, Count1), 
+#   Count is Count1 + 1.
 
-member(H, [_|T], Count) :- member(H, T, Count).
+# member(H, [_|T], Count) :- member(H, T, Count).
 
 q(_, [], 0).
 q(H, [H|Tail], N) :-!, q(H, Tail, N1), N is N1 + 1.
