@@ -1,12 +1,3 @@
-write_str([]) :- !.
-
-write_str([H|Tail]) :- 
-  put(H), 
-  write_str(Tail).
-
-write_list_str([]) :- !.
-write_list_str([H|T]) :- write_str(H), nl, write_list_str(T).
-
 read_str(A, N, Flag) :- 
   get0(X), 
   r_str(X, A, [], N, 0, Flag).

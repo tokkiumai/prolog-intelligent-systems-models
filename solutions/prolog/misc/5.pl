@@ -50,13 +50,7 @@ sol(A, N, K, L):-
     append(RepUnion2, RestPerm, Union),
     perm_list(Union, L).
 
-kek(A,N,K,BACK):- bagof(RES,sol(A,N,K,RES),BACK).
-
-
-in_list([El|_], El).
-in_list([_|T], El) :-
-    in_list(T, El).
-
+main(A,N,K,BACK):- bagof(RES,sol(A,N,K,RES),BACK).
 
 removeDupl(List, Res):- removeDupl(List, [], Res).
 removeDupl([], Res, Res):-!.
@@ -64,7 +58,7 @@ removeDupl([H|T], Dup, Res):- not(member(H, Dup)), removeDupl(T, [H|Dup], Res), 
 removeDupl([H|T], Dup, Res):- removeDupl(T, Dup, Res), !.
 
 start :-
-    kek([a,b,c,d,e,f],5,2,BACK),
+    main([a,b,c,d,e,f],5,2,BACK),
     removeDupl(BACK, RES),
     tell('output_5.txt'),
     write_list_str(RES),
