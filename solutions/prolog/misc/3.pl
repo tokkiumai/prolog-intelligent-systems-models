@@ -32,7 +32,7 @@ read_list_str(Cur_list, List, 0) :-
   read_list_str(C_l, List, Flag).
 
 pr5_5 :- 
-  see('input.txt'), 
+  see('input_3.txt'), 
   read_list_str([H|T]), 
   seen, 
   defact(H, [], '', Res), 

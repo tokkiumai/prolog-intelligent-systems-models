@@ -66,6 +66,6 @@ removeDupl([H|T], Dup, Res):- removeDupl(T, Dup, Res), !.
 start :-
     kek([a,b,c,d,e,f],5,2,BACK),
     removeDupl(BACK, RES),
-    tell('E:/2.txt'),
+    tell('output_5.txt'),
     write_list_str(RES),
     told.
