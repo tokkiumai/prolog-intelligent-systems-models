@@ -22,7 +22,7 @@ read_list_str(Cur_list, List, 0) :-
   append(Cur_list, [A], C_l), 
   read_list_str(C_l, List, Flag).
 
-pr5_5 :- 
+pr3_3 :- 
   see('input_3.txt'), 
   read_list_str([H|T]), 
   seen, 
