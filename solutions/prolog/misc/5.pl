@@ -1,8 +1,13 @@
-write_list_str([]):-!.
-write_list_str([H|T]):-write_str(H),nl,write_list_str(T).
+write_list_str([]) :- !.
+write_list_str([H|T]) :- 
+    write_str(H),
+    nl,
+    write_list_str(T).
 
-write_str([]):-!.
-write_str([H|Tail]):-put(H),write_str(Tail).
+write_str([]) :- !.
+write_str([H|Tail]) :- 
+    put(H),
+    write_str(Tail).
 
 perm_list([], []).
 perm_list(L, [H|P]):-
@@ -12,7 +17,6 @@ perm_list([], _, []).
 perm_list(L, H, [I|P]):-
     select(I, L, NL),
     perm_list(NL, I, P).
-    % I \= H,
 
 build_perm(Set, [], _).
 build_perm(Set, [H|T], Dup):- member(H, Set), not(member(H, Dup)), build_perm(Set, T, [H|Dup]).
