@@ -1,3 +1,3 @@
-# prologue-intelligent-systems-models
+# prolog-intelligent-systems-models
 
 This project is for university tasks
