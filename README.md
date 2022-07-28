@@ -1,3 +1,3 @@
 # prolog-intelligent-systems-models
 
-This project is for university tasks
+This repo is for university tasks
